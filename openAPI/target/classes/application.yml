@@ -1,0 +1,44 @@
+spring:
+  application:
+      name: openAPI
+server:
+  port: 63795
+eureka:
+  instance:
+    hostname: openAPI1
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.99.100:8762/eureka,http://192.168.99.100:8763/eureka
+feign:
+  hystrix:
+    enabled: false
+---
+
+
+spring:
+  application:
+      name: openAPI
+  profiles: openAPI1
+server:
+  port: 63793
+eureka:
+  instance:
+    hostname: openAPI1
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.99.100:8762/eureka,http://192.168.99.100:8763/eureka
+
+---
+spring:
+  application:
+      name: openAPI
+  profiles: openAPI2
+server:
+  port: 63794
+eureka:
+  instance:
+    hostname: openAPI2
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.99.100:8761/eureka,http://192.168.99.100:8763/eureka
+

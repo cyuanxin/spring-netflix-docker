@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openAPI/openAPI.iml" filepath="$PROJECT_DIR$/openAPI/openAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-netflix.iml" filepath="$PROJECT_DIR$/spring-cloud-netflix.iml" />
+    </modules>
+  </component>
+</project>
