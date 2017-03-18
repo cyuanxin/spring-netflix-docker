@@ -28,9 +28,9 @@ mvn package docker:build
 > enter client
 ```
 mvn package docker:build
-docker run -e "SPRING_PROFILES_ACTIVE=peer1" -p 8761:8761 -t fsp/eureka-server
-docker run -e "SPRING_PROFILES_ACTIVE=peer2" -p 8762:8762 -t fsp/eureka-server
-docker run -e "SPRING_PROFILES_ACTIVE=peer3" -p 8763:8763 -t fsp/eureka-server
+docker run -e "SPRING_PROFILES_ACTIVE=peer1" -net=host -t fsp/eureka-server
+docker run -e "SPRING_PROFILES_ACTIVE=peer2" -net=host -t fsp/eureka-server
+docker run -e "SPRING_PROFILES_ACTIVE=peer3" -net=host -t fsp/eureka-server
 docker run -e "SPRING_PROFILES_ACTIVE=client1" --net=host fsp/client
 docker run -e "SPRING_PROFILES_ACTIVE=client2" --net=host fsp/client
 ```
