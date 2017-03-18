@@ -10,11 +10,12 @@ mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=peer2"
 mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=peer3"
 ```
 
-> Open the browser, enter "localhost:8761" or "localhost:8762" or "localhost:8763"  , check whether the correct start
+> Open the browser, enter "localhost:8761" or "localhost:8762" or "localhost:8763"  , check whether the correct start .
+
 > Enter the project client
 ```
  mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=client1"
- mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=client1"
+ mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=client2"
   ```
  > run client nodes
 
@@ -28,6 +29,9 @@ mvn package docker:build
 > enter client
 ```
 mvn package docker:build
+```
+
+```
 docker run -e "SPRING_PROFILES_ACTIVE=peer1" -net=host -t fsp/eureka-server
 docker run -e "SPRING_PROFILES_ACTIVE=peer2" -net=host -t fsp/eureka-server
 docker run -e "SPRING_PROFILES_ACTIVE=peer3" -net=host -t fsp/eureka-server
