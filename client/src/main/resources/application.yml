@@ -5,8 +5,6 @@ spring:
 server:
   port: 50121
 eureka:
-  instance:
-    hostname: client
   client:
     serviceUrl:
       defaultZone: http://localhost:8762/eureka
@@ -18,8 +16,6 @@ spring:
 server:
   port: 50122
 eureka:
-  instance:
-    hostname: client
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
@@ -31,8 +27,6 @@ spring:
 server:
   port: 50123
 eureka:
-  instance:
-    hostname: client
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
