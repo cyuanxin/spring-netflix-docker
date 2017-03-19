@@ -4,11 +4,9 @@ spring:
 server:
   port: 63795
 eureka:
-  instance:
-    hostname: openAPI1
   client:
     serviceUrl:
-      defaultZone: http://192.168.99.100:8762/eureka,http://192.168.99.100:8763/eureka
+      defaultZone: http://localhost:8761/eureka
 feign:
   hystrix:
     enabled: false
@@ -22,11 +20,9 @@ spring:
 server:
   port: 63793
 eureka:
-  instance:
-    hostname: openAPI1
   client:
     serviceUrl:
-      defaultZone: http://192.168.99.100:8762/eureka,http://192.168.99.100:8763/eureka
+      defaultZone: http://localhost:8761/eureka
 
 ---
 spring:
@@ -36,9 +32,7 @@ spring:
 server:
   port: 63794
 eureka:
-  instance:
-    hostname: openAPI2
   client:
     serviceUrl:
-      defaultZone: http://192.168.99.100:8761/eureka,http://192.168.99.100:8763/eureka
+      defaultZone: http://localhost:8761/eureka
 
