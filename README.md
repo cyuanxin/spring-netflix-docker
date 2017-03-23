@@ -49,7 +49,7 @@ mvn package docker:build
 docker run -e "SPRING_PROFILES_ACTIVE=peer1" --net=host -t fsp/eureka-server
 docker run -e "SPRING_PROFILES_ACTIVE=peer2" --net=host -t fsp/eureka-server
 docker run -e "SPRING_PROFILES_ACTIVE=peer3" --net=host -t fsp/eureka-server
-docker run -e "SPRING_PROFILES_ACTIVE=client1" --net=host fsp/client
-docker run -e "SPRING_PROFILES_ACTIVE=client2" --net=host fsp/client
-docker run -e "SPRING_PROFILES_ACTIVE=openAPI1" --net=host fsp/openAPI
+docker run -e "SPRING_PROFILES_ACTIVE=client1" --net=host -t fsp/client
+docker run -e "SPRING_PROFILES_ACTIVE=client2" --net=host -t fsp/client
+docker run -e "SPRING_PROFILES_ACTIVE=openAPI1" --net=host -t fsp/openAPI
 ```
