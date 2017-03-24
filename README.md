@@ -29,7 +29,7 @@ mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=openAPI1"
 mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=openAPI2"
 ```
 
-> open the browser, enter "localhost:63793/hello" , you may see "HellWorld now env:client2" or "HellWorld now env:client2" in turn
+> open the browser, enter "localhost:63793/hello" , you may see "HellWorld now env:client1" or "HellWorld now env:client2" in turn
 
 ## docker deploy
 > enter eureka-server
